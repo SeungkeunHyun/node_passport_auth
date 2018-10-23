@@ -12,10 +12,11 @@ router.post("/users", (req, res) => {
 			});
 		} else {
 			User.create(req.body).then(user => {
-				console.log(user, user.getJWT());
-				res.setHeader("Authorization", user.getJWT());
+				var token = user.getJWT();
+				res.setHeader("Authorization", token);
 				res.json({
-					message: "User created successfully"
+					message: "User created successfully",
+					token: token
 				});
 			});
 		}
@@ -48,6 +49,7 @@ router.post('/users/auth', (req, res, next) => {
 			}
 			const token = user.getJWT();
 			res.setHeader('Authorization', token);
+			info.token = token;
 			res.send(info);
 		});
 		console.log(user);
