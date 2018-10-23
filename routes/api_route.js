@@ -22,7 +22,7 @@ router.post("/users", (req, res) => {
 	});
 });
 
-router.post('/users/me', passport.authenticate('jwt', {
+router.get('/users/me', passport.authenticate('jwt', {
 	session: false
 }), (req, res) => {
 	res.json(req.user);
