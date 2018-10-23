@@ -1,0 +1,14 @@
+{
+	"test": {
+		"PORT": 3000,
+		"MONGODB_URI": "mongodb://localhost:27017/nodePilot",
+		"JWT_EXPIRATION": "15m",
+		"JWT_SECRET": "Tripex+7k1HXr50kkEoymxblEQjaYst61kTkbmdsMX4="
+	},
+	"development": {
+		"PORT": 3000,
+		"MONGODB_URI": "mongodb://localhost:27017/nodePilot",
+		"JWT_EXPIRATION": "15m",
+		"JWT_SECRET": "oLJHhet66ZmK75oQGXJcMVBYiOrQNMxvpAnrrkJe48Q="
+	}
+}
